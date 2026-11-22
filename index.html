@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>PROJECT NOVA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+
+  <section id="sc-title" class="screen on">
+    <h1>PROJECT NOVA</h1>
+    <p class="sub">十×十の戦場で、歴史の軍勢を率いる戦略ボードゲーム</p>
+    <button id="bStart" class="btn big">ゲーム開始</button>
+    <button class="btn ghost bHelp">遊び方</button>
+    <p class="note">プロトタイプ版・数値はすべて仮設定です</p>
+  </section>
+
+  <section id="sc-select" class="screen">
+    <h2>勢力を選ぶ(ランダムに提示された5勢力から1つ)</h2>
+    <div id="cards"></div>
+    <div id="detail">勢力をタップすると詳細が表示されます</div>
+    <div class="row">
+      <button id="bReroll" class="btn ghost">提示し直す</button>
+      <button id="bGo" class="btn" disabled>この勢力で出陣</button>
+    </div>
+  </section>
+
+  <section id="sc-game" class="screen">
+    <div id="boardWrap"><div id="board"></div></div>
+    <aside id="panel">
+      <div id="status"></div>
+      <div id="info">部隊をタップして選択</div>
+      <div class="row">
+        <button id="bWait" class="btn small">待機</button>
+        <button id="bEnd" class="btn small">ターン終了</button>
+        <button class="btn small ghost bHelp">?</button>
+      </div>
+      <div id="tip">操作:自軍(青)をタップ→水色マスで移動→赤枠の敵をタップで攻撃</div>
+      <div id="log"></div>
+    </aside>
+  </section>
+
+  <div id="modal" class="hidden"><div id="modalBox"></div></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
